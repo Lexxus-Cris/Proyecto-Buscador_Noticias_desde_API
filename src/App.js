@@ -1,10 +1,18 @@
+import { Fragment } from "react";
+import Header from "./components/Header";
 
 
 function App() {
   return (
-    <div className="App">
-    
-    </div>
+    <Fragment>
+      <Header
+        title='Buscador de noticias'
+      />
+
+      <div className="container white">
+        
+      </div>
+    </Fragment>
   );
 }
 
