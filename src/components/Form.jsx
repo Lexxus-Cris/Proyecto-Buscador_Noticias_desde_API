@@ -6,7 +6,7 @@ import styles from './Form.module.css'
 import useSelect from '../hooks/useSelect';
 
 
-const Form = () => {
+const Form = ({guardarCategoria}) => {
 
    const OPTIONS = [
       { value: 'general', label: 'General' },
@@ -19,12 +19,20 @@ const Form = () => {
    ]
 
    // utilizar customhook
-   const [ categorie, SelectNoticias ] = useSelect('general', OPTIONS);
+   const [ categoria, SelectNoticias ] = useSelect('general', OPTIONS);
+
+   // submit al form, pasando categoria a app.js
+   const handleSubmit = e => {
+      e.preventDefault()
+
+      guardarCategoria(categoria);
+   }
 
    return (
       <div className={`row ${styles.buscador}`}>
          <div className="col s12 m8 offset-m2">
-            <form 
+            <form
+               onSubmit={handleSubmit}
             >
                <h2 className={styles.heading}>Encuentra Noticias por Categoría</h2>
 
