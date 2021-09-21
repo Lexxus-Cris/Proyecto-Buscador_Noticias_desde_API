@@ -12,7 +12,7 @@ const useSelect = (stateInicial, options) => {
    const SelectNoticias = () => (
       <select
          name=""
-         id=""
+         id="Categorie-select"
          className="browser-default"
          value={state}
          onChange={e => setState(e.target.value)}

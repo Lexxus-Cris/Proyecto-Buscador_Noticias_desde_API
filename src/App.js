@@ -3,6 +3,7 @@ import { Fragment, useState, useEffect } from "react";
 // Components
 import Form from "./components/Form";
 import Header from "./components/Header";
+import ListadoNoticias from "./components/ListadoNoticias";
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
         <Form
           guardarCategoria={setCategoria}
         />
+        <ListadoNoticias noticias={noticias} />
       </div>
     </Fragment>
   );
