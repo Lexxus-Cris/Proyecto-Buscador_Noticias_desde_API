@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './Form.module.css'
 
@@ -49,6 +50,10 @@ const Form = ({guardarCategoria}) => {
          </div>
       </div>
    )
+}
+
+Form.propTypes = {
+   guardarCategoria: PropTypes.func.isRequired
 }
 
 export default Form
